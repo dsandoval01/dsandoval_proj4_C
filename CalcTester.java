@@ -10,7 +10,7 @@ class CalcTester{
 	boolean running=true;
 	
 	while (running) {
-		System.out.println("Enter Your Postfix Arithmetic Expression Down Below or Enter quit to Exit");
+		System.out.println("Enter a fully parenthesized infix expression or enter quit to exit");
 		Scanner scanner = new Scanner(System.in);
 		String aStr = scanner.nextLine();
 
@@ -60,7 +60,7 @@ class CalcTester{
 		}
 
 		TNode r = ap.buildExpression(aStr);
-		//System.out.println(r);
+		System.out.println("Your final answer:");
 		ap.inOrder(r);
 	}
 }
